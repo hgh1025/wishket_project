@@ -12,11 +12,6 @@ serializer = AWSCostSerializer(AWSCost)
 
 
 
-
-
-
-
-
 class AWSCostSerializer(serializers.Serializer):
     #필드 = serializers.필드타입
     user_id = serializers.CharField(max_length=12)

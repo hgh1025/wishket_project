@@ -9,7 +9,7 @@ urlpatterns = [
     # path('api-auth/', include('rest_framework.urls')),
     path('aws/usage/', AWS_Usage.as_view(), name='aws-usage'),
     path('aws/bill/', AWS_Bill.as_view(), name='aws-bill'),
-    # path('aws/bill/<int:user_id>', AWS_Bill.as_view(), name='aws-bill'),
+    path('aws/bill/<int:user_id>', AWS_Bill.as_view(), name='aws-bill'),
     path('',include('main.urls')),
     
 ]

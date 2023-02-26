@@ -98,7 +98,7 @@ class AWS_Usage(APIView):
         # return JsonResponse(content, status=200)
 
         
-#사용 요금 조회 API  API 명세 
+#사용 요금 조회 API  명세 
 class AWS_Bill(APIView):
     def get_filtered_data(id, year, month):
         # 데이터 압축 파일 URL
@@ -160,10 +160,6 @@ class AWS_Bill(APIView):
                 'cost_krw': cost_krw
             }
 
-        # 결과를 json 형태로 반환합니다.
-        # result = json.dumps(monthly_data)
-        # response = HttpResponse(result, content_type='application/json')
-        # return Response(response, status=200)
       
         #JSON형태를 OrderedDict 형태로 변환
         stream = io.BytesIO(monthly_data)
